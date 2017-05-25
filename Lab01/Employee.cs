@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Lab01
+﻿namespace Lab01
 {
     public class Employee
     {
@@ -18,21 +12,11 @@ namespace Lab01
         public Date HireDate { get; set; }
         #endregion
 
-        #region Constructor
-        public Employee(string firstName, string lastName, Date bornDate, Date hireDate)
-        {
-            FirstName = firstName;
-            LastName = lastName;
-            BornDate = bornDate;
-            HireDate = hireDate;
-        }
-        #endregion
-
         #region Methods
         public override string ToString()
         {
-            return string.Format("{0} {1}\n\tBorn date: {2}\n\tHire date: {3}", 
-                FirstName, LastName, BornDate, HireDate);
+            return string.Format("{0} {1}\n\tBorn date...: {2}\n\tHire date...: {3}", 
+                                   FirstName, LastName, BornDate, HireDate);
         }
         #endregion
     }

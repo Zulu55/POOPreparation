@@ -7,22 +7,40 @@ namespace Lab01
     {
         static void Main(string[] args)
         {
-            var employee1 = new Employee("Juan", "Zuluaga", new Date(1974, 9, 23), new Date(2017, 5, 9));
-            var employee2 = new Employee("Celia", "Cruz", new Date(1956, 13, 45), new Date(2016, 2, 29));
-            var employee3 = new Employee("Fredy", "Mercury", new Date(1986, 12, 21), new Date(2001, 2, 29));
-
             var employees = new List<Employee>();
-            employees.Add(employee1);
-            employees.Add(employee2);
-            employees.Add(employee3);
+
+            employees.Add(new Employee
+            {
+                BornDate = new Date(1974, 9, 23),
+                FirstName = "Juan",
+                HireDate = new Date(2017, 5, 9),
+                LastName = "Zuluaga",
+            });
+
+            employees.Add(new Employee
+            {
+                BornDate = new Date(1954, 13, 43),
+                FirstName = "Celia",
+                HireDate = new Date(2000, 2, 29),
+                LastName = "Cruz",
+            });
+
+            employees.Add(new Employee
+            {
+                BornDate = new Date(1984, 12, 12),
+                FirstName = "Freddy",
+                HireDate = new Date(2001, 2, 29),
+                LastName = "Mercury",
+            });
 
             foreach (var employee in employees)
             {
                 Console.WriteLine(employee);
             }
 
+            Console.WriteLine("Press any key to finish...");
             Console.ReadKey();
-            Console.WriteLine("Hasta la vista baby...");
+            Console.WriteLine("Hasta la vista baby");
         }
     }
 }

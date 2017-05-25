@@ -6,7 +6,6 @@
         private int year;
         private int month;
         private int day;
-
         #endregion
 
         #region Properties
@@ -77,14 +76,14 @@
 
         private int CheckDay(int day)
         {
-            var dayPerMonth = new int [] { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; 
+            var daysPerMonth = new int[] { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-            if (day >= 1 && day <= dayPerMonth[Month])
+            if (day >= 1 && day <= daysPerMonth[Month])
             {
                 return day;
             }
 
-            if (Month == 2 && day == 29 && IsLeapYear(Year))
+            if (day == 29 && month == 2 && IsLeapYear(Year))
             {
                 return day;
             }
